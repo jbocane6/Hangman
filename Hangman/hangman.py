@@ -24,6 +24,7 @@ print("")
 
 while (error < 6):
     while True:
+        paint(word, error)
         letter= input("Please, input letter: ")
         if (len(letter) == 1):
             break
