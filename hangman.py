@@ -26,11 +26,14 @@ while (error < 6):
     while (True):
         paint(word, error)
         letter= input("Please, input letter: ")
-        if (letter == guess):
+        if (len(letter) == 1 & letter.isalpha()):
+            break
+        elif (letter == guess):
             print("You Win")
             exit(0)
-        elif (len(letter) == 1 & letter.isalpha()):
-            break
+        else:
+            error = error + 1
+
     letter = letter.lower()
     if (guess.find(letter) != -1):
         for i in range(0,lines):
