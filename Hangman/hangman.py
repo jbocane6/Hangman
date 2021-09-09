@@ -5,6 +5,8 @@ from words import word_list
 
 def paint(word, error):
     os.system('clear')
+    attempts = 6 - error
+    print("Remaining attempts: {:d}".format(attempts))
     for i in range(0,error):
         print("{}".format(muñeco[i]))
     print("\n{}\n".format(word))
