@@ -23,12 +23,12 @@ paint(word, error)
 print("")
 
 while (error < 6):
-    while True:
+    while (True):
         paint(word, error)
         letter= input("Please, input letter: ")
-        if (len(letter) == 1):
+        if (len(letter) == 1 & letter.isalpha()):
             break
-    
+    letter = letter.lower()
     if (guess.find(letter) != -1):
         for i in range(0,lines):
             if (letter == guess[i]):
